@@ -94,6 +94,8 @@
 		FF584A582BC0845300E7917A /* ThatPokemonProject */ = {
 			isa = PBXGroup;
 			children = (
+				FF584A842BC0859300E7917A /* App */,
+				FF584A832BC0858B00E7917A /* Core */,
 				FF584A592BC0845300E7917A /* ThatPokemonProjectApp.swift */,
 				FF584A5B2BC0845300E7917A /* ContentView.swift */,
 				FF584A5D2BC0845500E7917A /* Assets.xcassets */,
@@ -125,6 +127,100 @@
 				FF584A762BC0845500E7917A /* ThatPokemonProjectUITestsLaunchTests.swift */,
 			);
 			path = ThatPokemonProjectUITests;
+			sourceTree = "<group>";
+		};
+		FF584A832BC0858B00E7917A /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FF584A8E2BC0865000E7917A /* Constants */,
+				FF584A882BC085D400E7917A /* Endpoints */,
+				FF584A852BC0859C00E7917A /* Extensions */,
+				FF584A862BC085A800E7917A /* Model */,
+				FF584A892BC085E500E7917A /* Network */,
+				FF584A872BC085B500E7917A /* Services */,
+				FF584A8A2BC085FF00E7917A /* ViewModifers */,
+				FF584A8B2BC0860A00E7917A /* Views */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		FF584A842BC0859300E7917A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FF584A8D2BC0863100E7917A /* PokemonDetail */,
+				FF584A8C2BC0862700E7917A /* PokemonList */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		FF584A852BC0859C00E7917A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FF584A862BC085A800E7917A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF584A872BC085B500E7917A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FF584A882BC085D400E7917A /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		FF584A892BC085E500E7917A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FF584A8A2BC085FF00E7917A /* ViewModifers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModifers;
+			sourceTree = "<group>";
+		};
+		FF584A8B2BC0860A00E7917A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FF584A8C2BC0862700E7917A /* PokemonList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PokemonList;
+			sourceTree = "<group>";
+		};
+		FF584A8D2BC0863100E7917A /* PokemonDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PokemonDetail;
+			sourceTree = "<group>";
+		};
+		FF584A8E2BC0865000E7917A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
