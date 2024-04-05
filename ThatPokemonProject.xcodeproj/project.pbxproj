@@ -14,6 +14,11 @@
 		FF584A6B2BC0845500E7917A /* ThatPokemonProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A6A2BC0845500E7917A /* ThatPokemonProjectTests.swift */; };
 		FF584A752BC0845500E7917A /* ThatPokemonProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A742BC0845500E7917A /* ThatPokemonProjectUITests.swift */; };
 		FF584A772BC0845500E7917A /* ThatPokemonProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A762BC0845500E7917A /* ThatPokemonProjectUITestsLaunchTests.swift */; };
+		FF584A902BC086AB00E7917A /* IntConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A8F2BC086AB00E7917A /* IntConstants.swift */; };
+		FF584A922BC086D900E7917A /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A912BC086D900E7917A /* HTTPClient.swift */; };
+		FF584A942BC086E900E7917A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A932BC086E900E7917A /* Endpoint.swift */; };
+		FF584A962BC0870B00E7917A /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A952BC0870B00E7917A /* RequestError.swift */; };
+		FF584A982BC087C100E7917A /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A972BC087C100E7917A /* Data+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +49,11 @@
 		FF584A702BC0845500E7917A /* ThatPokemonProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ThatPokemonProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF584A742BC0845500E7917A /* ThatPokemonProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThatPokemonProjectUITests.swift; sourceTree = "<group>"; };
 		FF584A762BC0845500E7917A /* ThatPokemonProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThatPokemonProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FF584A8F2BC086AB00E7917A /* IntConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntConstants.swift; sourceTree = "<group>"; };
+		FF584A912BC086D900E7917A /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		FF584A932BC086E900E7917A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		FF584A952BC0870B00E7917A /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		FF584A972BC087C100E7917A /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Data+Extension.swift"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Data+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +166,7 @@
 		FF584A852BC0859C00E7917A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				FF584A972BC087C100E7917A /* Data+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -184,6 +195,9 @@
 		FF584A892BC085E500E7917A /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				FF584A912BC086D900E7917A /* HTTPClient.swift */,
+				FF584A932BC086E900E7917A /* Endpoint.swift */,
+				FF584A952BC0870B00E7917A /* RequestError.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -219,6 +233,7 @@
 		FF584A8E2BC0865000E7917A /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				FF584A8F2BC086AB00E7917A /* IntConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -353,8 +368,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF584A902BC086AB00E7917A /* IntConstants.swift in Sources */,
+				FF584A982BC087C100E7917A /* Data+Extension.swift in Sources */,
 				FF584A5C2BC0845300E7917A /* ContentView.swift in Sources */,
+				FF584A962BC0870B00E7917A /* RequestError.swift in Sources */,
+				FF584A922BC086D900E7917A /* HTTPClient.swift in Sources */,
 				FF584A5A2BC0845300E7917A /* ThatPokemonProjectApp.swift in Sources */,
+				FF584A942BC086E900E7917A /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
