@@ -9,20 +9,21 @@ import SwiftUI
 
 struct PokemonDetail: View {
     
+    // MARK: - Environment Object
+    @Environment(\.dismiss) private var dismiss
+    
     // MARK: - Properties
     private let pokemonViewModel: PokemonViewModel
     private let colours: [Color] = [Color.red, Color.blue, Color.purple, Color.pink, Color.green, Color.yellow]
     
+    // MARK: - Computed Properties
     var randomColour: Color {
         colours.randomElement() ?? .red
     }
     
-    let columns = [
-        GridItem(.adaptive(minimum: 100))
-    ]
-    
     // MARK: - State Properties
     @State private var viewModel: PokemonDetailViewModel!
+    @State private var showError = false
     
     init(pokemonViewModel: PokemonViewModel) {
         self.pokemonViewModel = pokemonViewModel
@@ -33,7 +34,6 @@ struct PokemonDetail: View {
     var body: some View {
         
         ScrollView {
-            
             VStack {
                 DetailHeader(url: viewModel.pokemon.iconURL, name: viewModel.pokemon.name)
                 
@@ -91,6 +91,16 @@ struct PokemonDetail: View {
                     
                 }
             }
+            .onChange(of: viewModel.state, { _, newValue in
+                if newValue == .error {
+                    showError = true
+                }
+            })
+            .alert("Error", isPresented: $showError, actions: {
+                Button("OK", role: .cancel) { }
+            }, message: {
+                Text("Unable to fetch \(viewModel.pokemon.name) information")
+            })
             .padding(.horizontal)
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Pokemon")

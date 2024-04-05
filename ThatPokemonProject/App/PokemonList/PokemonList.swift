@@ -10,6 +10,7 @@ import SwiftUI
 struct PokemonList: View {
     
     @State private var viewModel = PokemonListViewModel(service: PokemonService())
+    @State private var showError = false
     
     @Binding var selection: PokemonViewModel?
     
@@ -24,6 +25,9 @@ struct PokemonList: View {
                         }
                     }
                 }
+                .refreshable {
+                    viewModel.fetchPokemon()
+                }
                 .searchable(text: $viewModel.search)
                 .listStyle(.plain)
                 .onFirstAppear {
@@ -36,6 +40,19 @@ struct PokemonList: View {
                         .scaleEffect(2) // Adjust scale as needed
                 }
             }
+            .onChange(of: viewModel.state, { _, newValue in
+                if newValue == .error {
+                    showError = true
+                }
+            })
+            .alert("Error", isPresented: $showError, actions: {
+                Button(role: .cancel) { } label: {
+                    Text("OK")
+                }
+
+            }, message: {
+                Text("Unable to fetch Pokemon's, please try later")
+            })
             .navigationDestination(for: PokemonViewModel.self, destination: { model in
                 PokemonDetail(pokemonViewModel: model)
             })
