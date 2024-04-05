@@ -13,6 +13,10 @@ struct Home: View {
     NavigationSplitViewVisibility.doubleColumn
     
     var body: some View {
+        /* 
+         Use navigation split view to add some support for
+         iPadOS
+         */
         NavigationSplitView(columnVisibility: $columnVisibility) {
            PokemonList(selection: $selectedPokemon)
         } detail: {

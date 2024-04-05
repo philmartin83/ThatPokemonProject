@@ -9,17 +9,23 @@ import Foundation
 import SwiftUI
 
 struct WStack<Data, Content>: View where Data: RandomAccessCollection, Content: View {
+    
+    // MARK: - Properties
     public var data: Data
     var alignment: HorizontalAlignment
     var spacing: CGFloat
     var lineSpacing: CGFloat
     var lineLimit: Int?
     var isHiddenLastItem: Bool
+    
+    // MARK: - View Builder
     @ViewBuilder var content: (Data.Element) -> Content
     
+    // MARK: - State Properties
     @State private var framesOfIndecies: [Int: CGRect] = [:]
     @State private var frame: CGRect = CGRect()
     
+    // MARK: - Initaliser
     public init(
         _ data: Data,
         alignment: HorizontalAlignment = .leading,
@@ -38,6 +44,7 @@ struct WStack<Data, Content>: View where Data: RandomAccessCollection, Content: 
         self.content = content
     }
     
+    // MARK: - View
     public var body: some View {
         VStack(alignment: alignment, spacing: lineSpacing) {
             reader

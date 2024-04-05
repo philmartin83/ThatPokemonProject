@@ -7,8 +7,8 @@
 
 import SwiftUI
 
+/// This Modifier is used to only make execute stuff on loading the UI for the first time
 struct OnFirstAppearModifier: ViewModifier {
-
     private let onFirstAppearAction: () -> ()
     @State private var hasAppeared = false
     

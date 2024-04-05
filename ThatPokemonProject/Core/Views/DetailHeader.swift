@@ -14,7 +14,6 @@ struct DetailHeader: View {
     let url: URL?
     let name: String
     
-    
     // MARK: - View
     var body: some View {
         VStack(alignment: .center, spacing: 16) {

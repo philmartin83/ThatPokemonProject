@@ -9,8 +9,10 @@ import SwiftUI
 
 struct SubHeaderDetail<Content: View>: View {
     
+    // MARK: - View Builder
     @ViewBuilder let content: () -> Content
     
+    // MARK: - View
     var body: some View {
         HStack(spacing: 8) {
             content()

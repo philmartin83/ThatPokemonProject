@@ -100,6 +100,7 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
     }
     
     var flavourText: String {
+        // Here I'm only extracting the english language
         let englishText = species?.flavorTextEntries.first(where: {$0.language.name == "en"})?.flavorText
         let stringWithoutNewlines = englishText?.replacingOccurrences(of: "\n", with: " ")
         return stringWithoutNewlines ?? ""

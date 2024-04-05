@@ -8,9 +8,11 @@
 import Foundation
 
 struct PokemonStatViewModel {
+    // MARK: - Properties
     var statName: String
     var statValue: Int
     
+    // MARK: - Computed Prooerties
     var statNameAndValue: String {
         let statsNameCleanUp = statName.replacingOccurrences(of: "-", with: " ")
         return "\(statsNameCleanUp.capitalized) \(statValue)"

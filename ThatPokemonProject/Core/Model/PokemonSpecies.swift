@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - PokemonSpecies
 struct PokemonSpecies: Codable {
     let habitat: PokemonItem?
     let shape: PokemonItem

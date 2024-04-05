@@ -34,7 +34,6 @@ extension HTTPClient {
         endpoint.header?.forEach { request.addValue($0.value, forHTTPHeaderField: $0.key) }
         
         request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-        print(request.allHTTPHeaderFields!)
         if let body = endpoint.body {
             request.httpBody = body
         }
@@ -43,11 +42,12 @@ extension HTTPClient {
         guard let response = response as? HTTPURLResponse else {
             throw RequestError.noResponse
         }
-        print(response.statusCode)
-        
+
+        // Mainly used for debug purposes
         if let ppData = data.prettyPrintedJSONString {
             print(ppData)
         }
+        
         switch response.statusCode {
         case 200...299:
             do {

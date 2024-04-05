@@ -8,6 +8,7 @@
 import Foundation
 
 struct PokemonSubDetailViewModel: Hashable {
+    // MARK: - Properties
     let title: String
     let body: String
     let icon: String

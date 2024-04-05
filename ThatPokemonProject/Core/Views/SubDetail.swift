@@ -9,12 +9,13 @@ import SwiftUI
 
 struct SubDetail: View {
     
+    // MARK: - Properties
     let title: String
     let bodyText: String
     let icon: String
-    
     var shouldAddDivider: Bool = true
     
+    // MARK: - View
     var body: some View {
         HStack(spacing: 16) {
             if !icon.isEmpty {

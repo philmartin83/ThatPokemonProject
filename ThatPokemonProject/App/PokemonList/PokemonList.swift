@@ -53,9 +53,6 @@ struct PokemonList: View {
             }, message: {
                 Text("Unable to fetch Pokemon's, please try later")
             })
-            .navigationDestination(for: PokemonViewModel.self, destination: { model in
-                PokemonDetail(pokemonViewModel: model)
-            })
             .navigationTitle("Menu")
         }
     }

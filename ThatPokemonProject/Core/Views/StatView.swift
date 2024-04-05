@@ -9,8 +9,10 @@ import SwiftUI
 
 struct StatView: View {
     
+    // MARK: - Properties
     var stats: [PokemonStatViewModel]
     
+    // MARK: - View
     var body: some View {
         HStack {
             Divider()

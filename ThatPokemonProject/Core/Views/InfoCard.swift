@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InfoCard<Content: View>: View {
     
+    // MARK: - Properties
     var cardColour: Color
     @ViewBuilder let content: () -> Content
     

@@ -9,8 +9,10 @@ import SwiftUI
 
 struct HeaderTitle: View {
     
+    // MARK: - Properties
     let headerTitle: String
     
+    // MARK: - View
     var body: some View {
         Text(headerTitle)
             .font(.title2)

@@ -11,9 +11,11 @@ import SDWebImageSwiftUI
 
 struct ImageCard: View {
     
+    // MARK: - Properties
     let url: URL?
     let colour: Color
     
+    // MARK: - View
     var body: some View {
         WebImage(url: url)
             .indicator(.activity)

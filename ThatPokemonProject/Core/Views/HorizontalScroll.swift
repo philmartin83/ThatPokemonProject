@@ -9,8 +9,10 @@ import SwiftUI
 
 struct HorizontalScroll<Content: View>: View {
     
+    // MARK: - ViewBuilder
     @ViewBuilder let content: () -> Content
     
+    // MARK: - View
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             HStack(spacing: 8) {
