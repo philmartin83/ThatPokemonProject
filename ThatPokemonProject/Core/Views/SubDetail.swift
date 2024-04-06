@@ -17,14 +17,14 @@ struct SubDetail: View {
     
     // MARK: - View
     var body: some View {
-        HStack(spacing: 16) {
+        
+        HStack(spacing: 4) {
             if !icon.isEmpty {
                 Image(systemName: icon)
-                    .resizable()
-                    .frame(width: 20, height: 20)
+                    .font(.headline)
                     .foregroundStyle(.gray.opacity(0.4))
             }
-            VStack(spacing: 8) {
+            VStack(spacing: 4) {
                 Text(bodyText)
                     .font(.subheadline)
                 Text(title)

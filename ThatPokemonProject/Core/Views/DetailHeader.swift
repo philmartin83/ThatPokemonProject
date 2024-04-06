@@ -16,7 +16,7 @@ struct DetailHeader: View {
     
     // MARK: - View
     var body: some View {
-        VStack(alignment: .center, spacing: 16) {
+        VStack(spacing: 16) {
             WebImage(url: url)
             .indicator(.activity)
             .frame(width: 120, height: 120)
@@ -26,11 +26,11 @@ struct DetailHeader: View {
                 )
             Text(name.capitalized)
                 .font(.title)
-                .fontWeight(.bold)
+                .fontWeight(.heavy)
                 .accessibilityAddTraits(.isHeader)
                 .accessibilityHeading(.h3)
         }
-        .frame(maxWidth: .infinity)
+        .frame(maxWidth: .infinity, alignment: .center)
     }
 }
 

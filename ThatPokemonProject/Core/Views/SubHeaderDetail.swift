@@ -9,12 +9,15 @@ import SwiftUI
 
 struct SubHeaderDetail<Content: View>: View {
     
+    @Environment(\.dynamicTypeSize) var dynamicTypeSize
+    
     // MARK: - View Builder
     @ViewBuilder let content: () -> Content
     
     // MARK: - View
     var body: some View {
-        HStack(spacing: 8) {
+        let layout = dynamicTypeSize <= .xxLarge ? AnyLayout(HStackLayout(alignment: .center, spacing: 8)) : AnyLayout(VStackLayout(alignment: .center, spacing: 14))
+        layout {
             content()
         }
     }

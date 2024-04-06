@@ -31,7 +31,7 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
         var array = [PokemonSubDetailViewModel]()
         let weight = PokemonSubDetailViewModel(title:"Weight", body: "\(weight)", icon: "scalemass.fill")
         let height = PokemonSubDetailViewModel(title:"Height", body: "\(height)", icon: "pencil.and.ruler.fill")
-        let move = PokemonSubDetailViewModel(title:"Moves", body: "\(moves?.capitalized ?? "")", icon: "")
+        let move = PokemonSubDetailViewModel(title:"Moves", body: "\(moves?.capitalized ?? "")", icon: "figure.dance")
         array.append(contentsOf: [weight, height, move])
         return array
     }

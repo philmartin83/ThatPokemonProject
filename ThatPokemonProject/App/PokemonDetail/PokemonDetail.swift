@@ -47,7 +47,7 @@ struct PokemonDetail: View {
                 } else if viewModel.state == .defaultState {
                     if viewModel.pokemon.hasHabitat {
                         SubDetail(title: "Habitat", bodyText: viewModel.pokemon.habitat.capitalized, icon: "house.fill", shouldAddDivider: false)
-                            .padding(.bottom, 40)
+                            .padding(.vertical, 8)
                             .padding(.leading, -10)
                     }
                     SubHeaderDetail(content: {
@@ -55,7 +55,7 @@ struct PokemonDetail: View {
                             SubDetail(title: data.title, bodyText: data.body, icon: data.icon)
                         }
                     })
-                    .padding(.bottom, 30)
+                    .padding(.vertical)
                     
                     Text(viewModel.pokemon.flavourText)
                         .frame(maxWidth: .infinity)
