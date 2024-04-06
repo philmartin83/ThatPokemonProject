@@ -28,7 +28,7 @@ struct PokemonList: View {
                 .refreshable {
                     viewModel.fetchPokemon()
                 }
-                .searchable(text: $viewModel.search)
+                .searchable(text: $viewModel.search, placement: .navigationBarDrawer(displayMode: .always))
                 .listStyle(.plain)
                 .onFirstAppear {
                     viewModel.fetchPokemon()
