@@ -34,10 +34,7 @@ struct PokemonList: View {
                     viewModel.fetchPokemon()
                 }
                 if viewModel.state == .loading {
-                    ProgressView() // Activity Indicator
-                        .tint(.primary)
-                        .progressViewStyle(CircularProgressViewStyle())
-                        .scaleEffect(2) // Adjust scale as needed
+                    SpinningProgress(scale: 2)
                 }
             }
             .onChange(of: viewModel.state, { _, newValue in

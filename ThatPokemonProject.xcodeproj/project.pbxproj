@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF0C6F282BC1509300A06DC8 /* SpinningProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0C6F272BC1509300A06DC8 /* SpinningProgress.swift */; };
 		FF584A5A2BC0845300E7917A /* ThatPokemonProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A592BC0845300E7917A /* ThatPokemonProjectApp.swift */; };
 		FF584A5E2BC0845500E7917A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF584A5D2BC0845500E7917A /* Assets.xcassets */; };
 		FF584A612BC0845500E7917A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF584A602BC0845500E7917A /* Preview Assets.xcassets */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FF0C6F272BC1509300A06DC8 /* SpinningProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinningProgress.swift; sourceTree = "<group>"; };
 		FF584A562BC0845300E7917A /* ThatPokemonProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ThatPokemonProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF584A592BC0845300E7917A /* ThatPokemonProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThatPokemonProjectApp.swift; sourceTree = "<group>"; };
 		FF584A5D2BC0845500E7917A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 				FF584AC82BC08DA900E7917A /* SubHeaderDetail.swift */,
 				FF584AD42BC08E6C00E7917A /* TagView.swift */,
 				FF584AD22BC08E4500E7917A /* WStack.swift */,
+				FF0C6F272BC1509300A06DC8 /* SpinningProgress.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -538,6 +541,7 @@
 				FF584ACD2BC08DFA00E7917A /* ImageCard.swift in Sources */,
 				FF584AAA2BC08AFA00E7917A /* PokemonListViewModel.swift in Sources */,
 				FF584AC52BC08D6200E7917A /* DetailHeader.swift in Sources */,
+				FF0C6F282BC1509300A06DC8 /* SpinningProgress.swift in Sources */,
 				FF584AB32BC08BA800E7917A /* PokemonResult.swift in Sources */,
 				FF584AD32BC08E4500E7917A /* WStack.swift in Sources */,
 				FF584A942BC086E900E7917A /* Endpoint.swift in Sources */,

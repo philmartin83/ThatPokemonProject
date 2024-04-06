@@ -38,12 +38,7 @@ struct PokemonDetail: View {
                 DetailHeader(url: viewModel.pokemon.iconURL, name: viewModel.pokemon.name)
                 
                 if viewModel.state == .loading {
-                    HStack {
-                        Spacer()
-                        ProgressView()
-                            .tint(.primary)
-                        Spacer()
-                    }
+                    SpinningProgress(scale: 1.2)
                 } else if viewModel.state == .defaultState {
                     if viewModel.pokemon.hasHabitat {
                         SubDetail(title: "Habitat", bodyText: viewModel.pokemon.habitat.capitalized, icon: "house.fill", shouldAddDivider: false)
