@@ -9,17 +9,6 @@ import Foundation
 
 class PokemonViewModel: Identifiable, Hashable, Equatable {
     
-    // MARK: - Computed Property
-    var id: Int {
-        url.extractIDFromURL
-    }
-    
-    var iconURL: URL? {
-       
-        let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(id).png")
-        return url
-    }
-    
     // MARK: - Properties
     let url: String
     let name: String
@@ -27,6 +16,25 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
     var species: PokemonSpecies?
     
     // MARK: - Computed Properties
+    var id: Int {
+        url.extractIDFromURL
+    }
+    
+    var iconURL: URL? {
+        /*
+         Not ideal to use this because the base url for resouses might
+         change but the reasoning was the searching and filtering. 
+         I found initalliy there doesn't seem to be an api that I can do
+         real time searching using a contains on the search term only exact
+         matches appear to work (Unless I've missed something). When
+         requesting the list of pokemon upfront ("pokemon?limit") only the
+         name and url is provided would be helpful to of had just the
+         default icon.
+        */
+        let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(id).png")
+        return url
+    }
+    
     var arrayOfPhyicalitiesDetails: [PokemonSubDetailViewModel] {
         var array = [PokemonSubDetailViewModel]()
         let weight = PokemonSubDetailViewModel(title:"Weight", body: "\(weight)", icon: "scalemass.fill")
@@ -45,6 +53,7 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
         }
         return images
     }
+    
     var abilities: [String] {
         var abilities = [String]()
         details?.abilities.forEach { detail in
@@ -72,6 +81,7 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
         }
         return moves.randomElement()
     }
+    
     var habitat: String {
         species?.habitat?.name ?? ""
     }
@@ -86,11 +96,13 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
 
         return String(format: "%.1fm", lengthInMeters)
     }
+    
     var weight: String {
         let weightInGrams = details?.weight ?? 0
         let weightInKilograms = Double(weightInGrams) / 10.0 // Convert grams to kilogram
         return String(format: "%.1fkg", weightInKilograms)
     }
+    
     var shape: String {
         species?.shape.name ?? ""
     }
@@ -105,7 +117,6 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
         let stringWithoutNewlines = englishText?.replacingOccurrences(of: "\n", with: " ")
         return stringWithoutNewlines ?? ""
     }
-    
 
     // MARK: - Initaliser
     init(url: String, name: String) {
