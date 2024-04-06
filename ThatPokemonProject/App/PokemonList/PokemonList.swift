@@ -29,6 +29,7 @@ struct PokemonList: View {
                     viewModel.fetchPokemon()
                 }
                 .searchable(text: $viewModel.search, placement: .navigationBarDrawer(displayMode: .always))
+                .autocorrectionDisabled(true) 
                 .listStyle(.plain)
                 .onFirstAppear {
                     viewModel.fetchPokemon()
