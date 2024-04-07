@@ -92,7 +92,7 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
     
     var height: String {
         let lengthInCentimeters = details?.height ?? 0
-        let lengthInMeters = Double(lengthInCentimeters) / 10.0 // Convert decimetres to centimeters
+        let lengthInMeters = Double(lengthInCentimeters) / 10.0 // Convert decimetres to meters
 
         return String(format: "%.1fm", lengthInMeters)
     }
