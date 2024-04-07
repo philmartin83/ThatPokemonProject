@@ -94,7 +94,7 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
         let lengthInCentimeters = details?.height ?? 0
         let lengthInMeters = Double(lengthInCentimeters) / 10.0 // Convert decimetres to centimeters
 
-        return String(format: "%.1fcm", lengthInMeters)
+        return String(format: "%.1fm", lengthInMeters)
     }
     
     var weight: String {
@@ -136,8 +136,13 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
     
     // MARK: - Helpers
     
-    /// `Parameter: details` pass in additional details to update the viewmodel
-    /// `Note` Function to update this viewmodel after getting the details of the selected pokemon
+    /**
+     - Parameters:
+      -  detail:  pass in additional details to update the viewmodel
+      - species: pass in additional species to update the viewmodel
+     - Note:
+       -  Allows the extraction of the pokemon ids from URLs
+     */
     func packPokemonDetails(detail: PokemonDetails, species: PokemonSpecies) {
         self.details = detail
         self.species = species

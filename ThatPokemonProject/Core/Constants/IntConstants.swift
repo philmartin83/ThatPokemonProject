@@ -8,7 +8,10 @@
 import Foundation
 
 struct IntConstants {
-    /// `pokemonServiceLimit` is the limit of pokemon returned by the list service
+    /**
+      - Note:
+       - is the limit of pokemon returned by the list service
+     */
     static let pokemonServiceLimit = 2000
     
     static let baseStatMax = 255

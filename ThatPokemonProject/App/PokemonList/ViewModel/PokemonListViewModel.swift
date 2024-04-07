@@ -20,7 +20,10 @@ import Foundation
     var search = ""
     
     
-    /// Computed property to handle the filtering of the list in the view
+    /**
+      - Note:
+       - Computed property to handle the filtering of the list in the view
+     */
     var filterdResults: [PokemonViewModel] {
         return search.isEmpty ? pokemon : pokemon.filter({$0.name.lowercased().contains(search.lowercased())})
     }
@@ -38,7 +41,10 @@ import Foundation
     
     // MARK: - Helpers
     
-    /// `page` is in place here incase in the future pagination would be required
+    /**
+      - Parameters:
+        - page: is in place here incase in the future pagination would be required
+     */
     func fetchPokemon(page: Int = 0) {
         state = .loading
         Task {

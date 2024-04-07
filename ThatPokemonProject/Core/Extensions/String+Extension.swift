@@ -9,7 +9,10 @@ import Foundation
 
 extension String {
     
-    /// `Note` Allows the extraction of the pokemon ids from URLs
+    /**
+      - Note:
+       -  Allows the extraction of the pokemon ids from URLs
+     */
     var extractIDFromURL: Int {
         var arrayOfComponents = self.components(separatedBy: "/")
         arrayOfComponents = arrayOfComponents.filter({ $0 != ""})
