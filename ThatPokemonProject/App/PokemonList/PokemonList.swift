@@ -47,7 +47,6 @@ struct PokemonList: View {
                 Button(role: .cancel) { } label: {
                     Text("OK")
                 }
-
             }, message: {
                 Text("Unable to fetch Pokemon's, please try later")
             })

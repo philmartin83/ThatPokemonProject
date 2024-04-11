@@ -18,7 +18,6 @@
 		FF584A942BC086E900E7917A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A932BC086E900E7917A /* Endpoint.swift */; };
 		FF584A962BC0870B00E7917A /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A952BC0870B00E7917A /* RequestError.swift */; };
 		FF584A982BC087C100E7917A /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A972BC087C100E7917A /* Data+Extension.swift */; };
-		FF584A9A2BC0895500E7917A /* URL+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A992BC0895500E7917A /* URL+Extension.swift */; };
 		FF584A9C2BC0896B00E7917A /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A9B2BC0896B00E7917A /* Bundle+Extension.swift */; };
 		FF584A9E2BC0897D00E7917A /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A9D2BC0897D00E7917A /* View+Extension.swift */; };
 		FF584AA02BC0898F00E7917A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF584A9F2BC0898F00E7917A /* String+Extension.swift */; };
@@ -86,7 +85,6 @@
 		FF584A932BC086E900E7917A /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		FF584A952BC0870B00E7917A /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
 		FF584A972BC087C100E7917A /* Data+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Data+Extension.swift"; path = "../../../../Library/Mobile Documents/com~apple~CloudDocs/Data+Extension.swift"; sourceTree = "<group>"; };
-		FF584A992BC0895500E7917A /* URL+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Extension.swift"; sourceTree = "<group>"; };
 		FF584A9B2BC0896B00E7917A /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		FF584A9D2BC0897D00E7917A /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		FF584A9F2BC0898F00E7917A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
@@ -238,7 +236,6 @@
 				FF584A9B2BC0896B00E7917A /* Bundle+Extension.swift */,
 				FF584A972BC087C100E7917A /* Data+Extension.swift */,
 				FF584A9F2BC0898F00E7917A /* String+Extension.swift */,
-				FF584A992BC0895500E7917A /* URL+Extension.swift */,
 				FF584A9D2BC0897D00E7917A /* View+Extension.swift */,
 			);
 			path = Extensions;
@@ -517,7 +514,6 @@
 				FF584AD72BC08EB700E7917A /* Home.swift in Sources */,
 				FF584A9C2BC0896B00E7917A /* Bundle+Extension.swift in Sources */,
 				FF584A9E2BC0897D00E7917A /* View+Extension.swift in Sources */,
-				FF584A9A2BC0895500E7917A /* URL+Extension.swift in Sources */,
 				FF584AB12BC08B9100E7917A /* PokemonSpecies.swift in Sources */,
 				FF584ADB2BC0A0D500E7917A /* StatView.swift in Sources */,
 				FF584AAF2BC08B7700E7917A /* PokemonDetails.swift in Sources */,

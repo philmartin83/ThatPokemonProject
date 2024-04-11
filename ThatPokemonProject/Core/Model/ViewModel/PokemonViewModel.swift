@@ -68,17 +68,13 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
     
     var stats: [PokemonStatViewModel] {
         var stats = [PokemonStatViewModel]()
-        details?.stats.forEach({ stat in
-            stats.append(PokemonStatViewModel(statName: stat.stat.name, statValue: stat.baseStat))
-        })
+        stats = details?.stats.map({PokemonStatViewModel(statName: $0.stat.name, statValue: $0.baseStat)}) ?? []
         return stats
     }
     
     var moves: String? {
         var moves = [String]()
-        details?.moves.forEach { item in
-            moves.append(item.move.name)
-        }
+        moves = details?.moves.map({$0.move.name}) ?? []
         return moves.randomElement()
     }
     

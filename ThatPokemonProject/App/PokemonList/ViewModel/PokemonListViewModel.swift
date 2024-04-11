@@ -61,10 +61,8 @@ import Foundation
     // MARK: - Private Helpers
     private func packPokemon(result: PokemonResult) {
         var arrayOfPokemonViewModel = [PokemonViewModel]()
-        result.pokemon.forEach { pMon in
-            arrayOfPokemonViewModel.append(PokemonViewModel(url: pMon.url,
-                                                            name: pMon.name))
-        }
+        arrayOfPokemonViewModel = result.pokemon.map({PokemonViewModel(url: $0.url,
+                                                                       name: $0.name)})
         pokemon.append(contentsOf: arrayOfPokemonViewModel)
     }
 }

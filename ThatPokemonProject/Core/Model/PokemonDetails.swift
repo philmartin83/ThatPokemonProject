@@ -70,14 +70,6 @@ class Sprites: Codable {
     let frontDefault: String?
     let frontShiny: String?
     let animated: Sprites?
-
-    enum CodingKeys: String, CodingKey {
-        case backDefault = "back_default"
-        case backShiny = "back_shiny"
-        case frontDefault = "front_default"
-        case frontShiny = "front_shiny"
-        case animated
-    }
     
     var urlStrings: [String?] {
         [frontDefault, backDefault, frontShiny, backShiny]

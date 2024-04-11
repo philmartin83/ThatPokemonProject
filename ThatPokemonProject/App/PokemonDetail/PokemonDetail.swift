@@ -14,7 +14,7 @@ struct PokemonDetail: View {
     
     // MARK: - Properties
     private let pokemonViewModel: PokemonViewModel
-    private let colours: [Color] = [Color.red, Color.blue, Color.purple, Color.pink, Color.green, Color.yellow]
+    private let colours: [Color] = [.red, .blue, .purple, .pink, .green, .yellow]
     
     // MARK: - Computed Properties
     var randomColour: Color {
@@ -60,7 +60,7 @@ struct PokemonDetail: View {
                     
                     Divider()
                     HorizontalScroll {
-                        ForEach(viewModel.pokemon.pokemonImages) { imageURL in
+                        ForEach(viewModel.pokemon.pokemonImages, id:\.self) { imageURL in
                             ImageCard(url: imageURL, colour: .gray.opacity(0.7))
                         }
                     }
