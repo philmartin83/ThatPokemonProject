@@ -23,21 +23,21 @@ extension PokemonEndpoint: Endpoint {
     var method: RequestMethod {
         switch self {
         case .pokemonList, .pokemonDetail, .pokemonSpicies:
-            return .get
+            .get
         }
     }
     
     var header: [String : String]? {
         switch self {
         case .pokemonList, .pokemonDetail, .pokemonSpicies:
-            return nil
+            nil
         }
     }
     
     var body: Data? {
         switch self {
         case .pokemonList, .pokemonDetail, .pokemonSpicies:
-            return nil
+            nil
         }
     }
     

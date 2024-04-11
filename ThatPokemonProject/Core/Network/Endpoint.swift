@@ -17,7 +17,7 @@ protocol Endpoint {
 
 extension Endpoint {
     var baseURL: String {
-        return "https://pokeapi.co/api/v2/"
+        "https://pokeapi.co/api/v2/"
     }
 }
 

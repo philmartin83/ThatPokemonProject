@@ -25,7 +25,7 @@ import Foundation
        - Computed property to handle the filtering of the list in the view
      */
     var filterdResults: [PokemonViewModel] {
-        return search.isEmpty ? pokemon : pokemon.filter({$0.name.lowercased().contains(search.lowercased())})
+        search.isEmpty ? pokemon : pokemon.filter({$0.name.lowercased().contains(search.lowercased())})
     }
     
     // MARK: - View State

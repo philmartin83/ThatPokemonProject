@@ -17,7 +17,7 @@ extension String {
         var arrayOfComponents = self.components(separatedBy: "/")
         arrayOfComponents = arrayOfComponents.filter({ $0 != ""})
         let id = arrayOfComponents.last
-        guard let id, let intId = Int(id) else {return 0}
+        guard let id, let intId = Int(id) else { return 0 }
         return intId
     }
 }

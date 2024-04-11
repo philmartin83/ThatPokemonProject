@@ -9,6 +9,6 @@ import SwiftUI
 
 extension View {
     func onFirstAppear(_ onFirstAppearAction: @escaping () -> () ) -> some View {
-        return modifier(OnFirstAppearModifier(onFirstAppearAction))
+        modifier(OnFirstAppearModifier(onFirstAppearAction))
     }
 }

@@ -31,8 +31,7 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
          name and url is provided would be helpful to of had just the
          default icon.
         */
-        let url = URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(id).png")
-        return url
+        URL(string: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/\(id).png")
     }
     
     var arrayOfPhyicalitiesDetails: [PokemonSubDetailViewModel] {
@@ -45,21 +44,11 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
     }
     
     var pokemonImages: [URL] {
-        var images = [URL]()
-        details?.sprites.urlStrings.forEach { urlString in
-            if let urlString, let url = URL(string: urlString) {
-                images.append(url)
-            }
-        }
-        return images
+        details?.sprites.urlStrings.compactMap { URL(string:$0 ?? "") } ?? []
     }
     
     var abilities: [String] {
-        var abilities = [String]()
-        details?.abilities.forEach { detail in
-            abilities.append(detail.ability.name)
-        }
-        return abilities
+        details?.abilities.map({$0.ability.name}) ?? []
     }
     
     var hasAbilities: Bool {
@@ -67,9 +56,7 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
     }
     
     var stats: [PokemonStatViewModel] {
-        var stats = [PokemonStatViewModel]()
-        stats = details?.stats.map({PokemonStatViewModel(statName: $0.stat.name, statValue: $0.baseStat)}) ?? []
-        return stats
+        details?.stats.map({PokemonStatViewModel(statName: $0.stat.name, statValue: $0.baseStat)}) ?? []
     }
     
     var moves: String? {
@@ -122,12 +109,12 @@ class PokemonViewModel: Identifiable, Hashable, Equatable {
     
     // MARK: - Equatable
     static func ==(lhs: PokemonViewModel, rhs: PokemonViewModel) -> Bool {
-        return lhs.id == rhs.id
+        lhs.id == rhs.id
     }
     
     // MARK: - Hashable
     func hash(into hasher: inout Hasher) {
-        return hasher.combine(id)
+        hasher.combine(id)
     }
     
     // MARK: - Helpers
