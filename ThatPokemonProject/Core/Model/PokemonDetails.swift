@@ -17,17 +17,6 @@ struct PokemonDetails: Codable {
     let sprites: Sprites
     let stats: [Stat]
     let weight: Int
-
-    enum CodingKeys: String, CodingKey {
-        case abilities
-        case height
-        case id
-        case moves
-        case sprites
-        case weight
-        case species
-        case stats
-    }
     
     var speciesId: Int {
         species.url.extractIDFromURL
@@ -37,30 +26,17 @@ struct PokemonDetails: Codable {
 // MARK: - Ability
 struct Ability: Codable {
     let ability: PokemonItem
-
-    enum CodingKeys: String, CodingKey {
-        case ability
-    }
 }
 
 // MARK: - Move
 struct Move: Codable {
     let move: PokemonItem
-
-    enum CodingKeys: String, CodingKey {
-        case move
-    }
 }
 
 // MARK: - Stat
 struct Stat: Codable {
     let baseStat, effort: Int
     let stat: PokemonItem
-
-    enum CodingKeys: String, CodingKey {
-        case baseStat = "base_stat"
-        case effort, stat
-    }
 }
 
 // MARK: - Sprites

@@ -51,7 +51,9 @@ extension HTTPClient {
         switch response.statusCode {
         case 200...299:
             do {
-                let decodedResponse = try JSONDecoder().decode(responseModel, from: data)
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                let decodedResponse = try decoder.decode(responseModel, from: data)
                 return decodedResponse
             } catch {
                 throw RequestError.decode

@@ -12,14 +12,7 @@ struct PokemonResult: Codable {
     let count: Int
     let next: String?
     let previous: String?
-    let pokemon: [PokemonItem]
-    
-    enum CodingKeys: String, CodingKey {
-        case count
-        case next
-        case previous
-        case pokemon = "results"
-    }
+    let results: [PokemonItem]
 }
 
 // MARK: - PokemonItem

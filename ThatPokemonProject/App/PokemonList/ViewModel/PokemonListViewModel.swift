@@ -49,8 +49,8 @@ import Foundation
         state = .loading
         Task {
             do {
-                let result = try await service.fetchListOfPokemon(offset: 0)
-                packPokemon(result: result)
+                let response = try await service.fetchListOfPokemon(offset: 0)
+                packPokemon(response: response)
                 state = .defaultState
             } catch {
                 state = .error
@@ -59,9 +59,9 @@ import Foundation
     }
     
     // MARK: - Private Helpers
-    private func packPokemon(result: PokemonResult) {
+    private func packPokemon(response: PokemonResult) {
         var arrayOfPokemonViewModel = [PokemonViewModel]()
-        arrayOfPokemonViewModel = result.pokemon.map({PokemonViewModel(url: $0.url,
+        arrayOfPokemonViewModel = response.results.map({PokemonViewModel(url: $0.url,
                                                                        name: $0.name)})
         pokemon.append(contentsOf: arrayOfPokemonViewModel)
     }
